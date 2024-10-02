@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links-center {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-grow: 1;
+    margin-left: 100px;
+}
+
+.nav-links-center li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+
+.signup-btn {
+  
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.signup-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 4px 0;
+}
+
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #19198e, #8e8eca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.cta {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.subtext {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.video-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links-center {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links-center li {
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links-center li:last-child {
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px; 
+    }
+
+    
+    .nav-right {
+        display: none;
+    }
+
+    
+    .nav-links-center::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links-center li {
+        padding: 15px 0;
+    }
+
+   
+    .nav-links-center::before {
+        content: "Customer Login";
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .nav-links-center::after {
+        content: "Sign Up";
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+        font-weight: bold;
+        color: #fff;
+        background-color: #000; 
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .nav-links-center {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .signup-btn {
+        margin-left: 10px;
+    } 
+
+    
+    .mobile-only {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+    }
+}
